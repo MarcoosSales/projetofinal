@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Cidade implements Cadastro, Serializable {
@@ -15,6 +16,9 @@ public class Cidade implements Cadastro, Serializable {
     private long id;
     private String nome;
     private String uf;
+    
+    @ManyToOne
+    Estado estado;
 
     @Override
     public long getId() {
