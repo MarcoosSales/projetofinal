@@ -1,0 +1,219 @@
+{
+    "info": {
+        "name": "RESTer",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Cadastro_Rest",
+            "item": [
+                {
+                    "request": {
+                        "url": "http://localhost:13180/server/api/voo/4",
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    },
+                    "id": "rester-3",
+                    "name": "DELETE"
+                },
+                {
+                    "request": {
+                        "url": "localhost:13180/server/api/voo/5/6",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    },
+                    "id": "rester-5",
+                    "name": "GET_CidadeOrigem_CidadeDestino"
+                },
+                {
+                    "request": {
+                        "url": "localhost:13180/server/api/voo/5/6/2019-05-30",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    },
+                    "id": "rester-6",
+                    "name": "GET_CidadeOrigem_CidadeDestino_DataPartida"
+                },
+                {
+                    "request": {
+                        "url": "http://localhost:13180/server/api/voo/5/6/2019-05-30/0",
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ]
+                    },
+                    "id": "rester-4",
+                    "name": "GET_DataPartida_Preco",
+                    "response": [
+                        {
+                            "id": "rester-14",
+                            "name": "2019-07-02T20:24:12.621Z GET",
+                            "originalRequest": {
+                                "url": "http://localhost:13180/server/api/voo/5/6/2019-05-30/0",
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ]
+                            },
+                            "responseTime": 111,
+                            "header": [
+                                {
+                                    "key": "Server",
+                                    "value": "GlassFish Server Open Source Edition  5.0"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  5.0  Java/Oracle Corporation/1.8)"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "441"
+                                }
+                            ],
+                            "body": "{\"aviao\":{\"id\":1,\"modelo\":\"Boeing Top\"},\"cidadeDestino\":{\"estado\":{\"UF\":\"PA\",\"id\":39,\"nome\":\"Pará\",\"pais\":\"Brasil\"},\"id\":6,\"nome\":\"Tucuruí\"},\"cidadeOrigem\":{\"estado\":{\"UF\":\"TO\",\"id\":51,\"nome\":\"Tocantins\",\"pais\":\"Brasil\"},\"id\":5,\"nome\":\"Palmas\"},\"horadataChegada\":\"2019-05-30\",\"horadataPartida\":\"2019-05-30\",\"id\":5,\"piloto\":{\"cpf\":\"12345678910\",\"dataNascimento\":\"10-12-86\",\"id\":1,\"nome\":\"Marcos\",\"telefone\":\"55555555555\"},\"precoPassagem\":0}",
+                            "status": "OK",
+                            "code": 200
+                        }
+                    ]
+                },
+                {
+                    "request": {
+                        "url": "http://localhost:13180/server/api/voo",
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"cidadeOrigem\": {\n        \"id\": 5\n    },\n    \"cidadeDestino\": {\n        \"id\": 6\n    },\n    \"precoPacagem\": 500,\n    \"aviao\": {\n        \"id\": 1\n    },\n    \"piloto\": {\n        \"id\": 1\n    },\n    \"horadataPartida\": \"2019-05-30\",\n    \"horadataChegada\": \"2019-05-30\"\n}\n"
+                        }
+                    },
+                    "id": "rester-2",
+                    "name": "POST",
+                    "response": [
+                        {
+                            "id": "rester-9",
+                            "name": "2019-07-02T20:10:32.099Z POST",
+                            "originalRequest": {
+                                "url": "http://localhost:13180/server/api/voo",
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"cidadeOrigem\": {\n        \"id\": 5\n    },\n    \"cidadeDestino\": {\n        \"id\": 6\n    },\n    \"precoPacagem\": 500,\n    \"aviao\": {\n        \"id\": 1\n    },\n    \"piloto\": {\n        \"id\": 1\n    },\n    \"horadataPartida\": \"2019-05-30\",\n    \"horadataChegada\": \"2019-05-30\"\n}\n"
+                                }
+                            },
+                            "responseTime": 236,
+                            "header": [
+                                {
+                                    "key": "Server",
+                                    "value": "GlassFish Server Open Source Edition  5.0"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  5.0  Java/Oracle Corporation/1.8)"
+                                }
+                            ],
+                            "body": "",
+                            "status": "No Content",
+                            "code": 204
+                        }
+                    ]
+                },
+                {
+                    "request": {
+                        "url": "http://localhost:13180/server/api/voo/",
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \n\"id\":4,\n    \"cidadeOrigem\": {\n        \"id\": 6\n    },\n    \"cidadeDestino\": {\n        \"id\": 5\n    },\n\n    \"precoPassagem\": 1000,\n    \"aviao\": {\n        \"id\": 1\n    },\n    \"piloto\": {\n        \"id\": 1\n    },\n    \"horadataPartida\": \"2019-07-01\",\n    \"horadataChegada\": \"2019-07-01\"\n}\n"
+                        }
+                    },
+                    "id": "rester-1",
+                    "name": "PUT",
+                    "response": [
+                        {
+                            "id": "rester-10",
+                            "name": "2019-07-02T20:14:04.911Z PUT",
+                            "originalRequest": {
+                                "url": "http://localhost:13180/server/api/voo/",
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{ \n\"id\":4,\n    \"cidadeOrigem\": {\n        \"id\": 6\n    },\n    \"cidadeDestino\": {\n        \"id\": 5\n    },\n\n    \"precoPassagem\": 1000,\n    \"aviao\": {\n        \"id\": 1\n    },\n    \"piloto\": {\n        \"id\": 1\n    },\n    \"horadataPartida\": \"2019-07-01\",\n    \"horadataChegada\": \"2019-07-01\"\n}\n"
+                                }
+                            },
+                            "responseTime": 216,
+                            "header": [
+                                {
+                                    "key": "Server",
+                                    "value": "GlassFish Server Open Source Edition  5.0"
+                                },
+                                {
+                                    "key": "X-Powered-By",
+                                    "value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  5.0  Java/Oracle Corporation/1.8)"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                },
+                                {
+                                    "key": "Content-Length",
+                                    "value": "4"
+                                }
+                            ],
+                            "body": "true",
+                            "status": "OK",
+                            "code": 200
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

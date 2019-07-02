@@ -19,7 +19,6 @@ public class Piloto implements Cadastro{
     
     private String dataNascimento;
     private String cpf;
-    private double cht;
 
     
     public String getTelefone() {
@@ -52,14 +51,6 @@ public class Piloto implements Cadastro{
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public double getCht() {
-        return cht;
-    }
-
-    public void setCht(double cht) {
-        this.cht = cht;
     }
 
     @Override

@@ -1,7 +1,6 @@
 
 package com.aluno.server.model;
 
-import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,8 +21,6 @@ public class Voo implements Cadastro{
 
     @ManyToOne
     private Cidade cidadeDestino;
-
-    private int numeroVoo;
 
     private long precoPassagem;
 
@@ -62,14 +59,6 @@ public class Voo implements Cadastro{
 
     public void setCidadeDestino(Cidade cidadeDestino) {
         this.cidadeDestino = cidadeDestino;
-    }
-
-    public int getNumeroVoo() {
-        return numeroVoo;
-    }
-
-    public void setNumeroVoo(int numeroVoo) {
-        this.numeroVoo = numeroVoo;
     }
 
     public long getPrecoPassagem() {

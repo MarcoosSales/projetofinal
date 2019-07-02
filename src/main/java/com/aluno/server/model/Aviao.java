@@ -2,7 +2,6 @@
 package com.aluno.server.model;
 
 
-import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,8 +15,7 @@ public class Aviao implements Cadastro  {
     private Long id;
     
     private String modelo;
-    private String dataFabricacao;
-    private int capacidadePassageiros;
+
     
     @Override
     public Long getId() {
@@ -37,21 +35,4 @@ public class Aviao implements Cadastro  {
         this.modelo = modelo;
     }
 
-    public String getDataFabricacao() {
-        return dataFabricacao;
-    }
-
-    public void setDataFabricacao(String dataFabricacao) {
-        this.dataFabricacao = dataFabricacao;
-    }
-
-    public int getCapacidadePassageiros() {
-        return capacidadePassageiros;
-    }
-
-    public void setCapacidadePassageiros(int capacidadePassageiros) {
-        this.capacidadePassageiros = capacidadePassageiros;
-    }
-    
-    
 }
