@@ -16,7 +16,7 @@ public class Aviao implements Cadastro  {
     private Long id;
     
     private String modelo;
-    private LocalDate dataFabricacao;
+    private String dataFabricacao;
     private int capacidadePassageiros;
     
     @Override
@@ -37,11 +37,11 @@ public class Aviao implements Cadastro  {
         this.modelo = modelo;
     }
 
-    public LocalDate getDataFabricacao() {
+    public String getDataFabricacao() {
         return dataFabricacao;
     }
 
-    public void setDataFabricacao(LocalDate dataFabricacao) {
+    public void setDataFabricacao(String dataFabricacao) {
         this.dataFabricacao = dataFabricacao;
     }
 

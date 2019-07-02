@@ -58,7 +58,7 @@ public class VooResource {
     //Cadastrar reserva do voo
     @POST
     public void insert(Voo voo) {
-        dao.saveForPost(voo);
+        dao.savePost(voo);
     }
 
     //Alterar reserva do voo

@@ -9,8 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 
+
 @Entity
-public class Voo implements Cadastro {
+public class Voo implements Cadastro{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +25,7 @@ public class Voo implements Cadastro {
 
     private int numeroVoo;
 
-    private long precoPacagem;
+    private long precoPassagem;
 
     @ManyToOne
     private Aviao aviao;
@@ -32,15 +33,17 @@ public class Voo implements Cadastro {
     @ManyToOne
     private Piloto piloto;
 
-    private LocalDate horadataPartida;
+    private String horadataPartida;
 
-    private LocalDate horadataChegada;
+    private String horadataChegada;
 
     
+    @Override
     public Long getId() {
         return id;
     }
 
+    @Override
     public void setId(Long id) {
         this.id = id;
     }
@@ -69,12 +72,12 @@ public class Voo implements Cadastro {
         this.numeroVoo = numeroVoo;
     }
 
-    public long getPrecoPacagem() {
-        return precoPacagem;
+    public long getPrecoPassagem() {
+        return precoPassagem;
     }
 
-    public void setPrecoPacagem(long precoPacagem) {
-        this.precoPacagem = precoPacagem;
+    public void setPrecoPassagem(long precoPassagem) {
+        this.precoPassagem = precoPassagem;
     }
 
     public Aviao getAviao() {
@@ -93,19 +96,19 @@ public class Voo implements Cadastro {
         this.piloto = piloto;
     }
 
-    public LocalDate getHoradataPartida() {
+    public String getHoradataPartida() {
         return horadataPartida;
     }
 
-    public void setHoradataPartida(LocalDate horadataPartida) {
+    public void setHoradataPartida(String horadataPartida) {
         this.horadataPartida = horadataPartida;
     }
 
-    public LocalDate getHoradataChegada() {
+    public String getHoradataChegada() {
         return horadataChegada;
     }
 
-    public void setHoradataChegada(LocalDate horadataChegada) {
+    public void setHoradataChegada(String horadataChegada) {
         this.horadataChegada = horadataChegada;
     }
 }
