@@ -1,50 +1,52 @@
 
 package com.aluno.server.model;
 
-/**
- *
- * @author aluno
- */
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Estado implements Cadastro {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     
     private String nome;
-    private String uf;
+    private String pais;
+    private String UF;
 
-    /**
-     * @return the nome
-     */
     public String getNome() {
         return nome;
     }
 
-    /**
-     * @param nome the nome to set
-     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    /**
-     * @return the uf
-     */
-    public String getUf() {
-        return uf;
+    public String getPais() {
+        return pais;
     }
 
-    /**
-     * @param uf the uf to set
-     */
-    public void setUf(String uf) {
-        this.uf = uf;
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 
-    @Override
-    public long getId() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getUF() {
+        return UF;
     }
 
-    @Override
-    public void setId(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setUF(String UF) {
+        this.UF = UF;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
 }

@@ -2,8 +2,8 @@
 package com.aluno.server.model.dao;
 
 import com.aluno.server.model.Cadastro;
+
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 public class JpaDAO<T extends Cadastro> implements DAO<T> {

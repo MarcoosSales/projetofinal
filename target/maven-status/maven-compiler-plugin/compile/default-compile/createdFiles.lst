@@ -1,9 +1,12 @@
-com/aluno/server/model/dao/DAO.class
 com/aluno/server/model/Hotel.class
-com/aluno/server/model/dao/JpaDAO.class
 com/aluno/server/model/rest/UsuarioResource.class
 com/aluno/server/model/config/RestConfig.class
 com/aluno/server/model/Cadastro.class
 com/aluno/server/model/config/Producers.class
 com/aluno/server/model/Usuario.class
 com/aluno/server/model/Cidade.class
+com/aluno/server/model/dao/DAO.class
+com/aluno/server/model/dao/JpaDAO.class
+com/aluno/server/model/Estado.class
+com/aluno/server/model/Bairro.class
+com/aluno/server/model/QuartoHotel.class
